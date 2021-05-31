@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang= "es">
+<head>
+
+<meta charset="utf-8"/>
+<meta name="description" content="En esta pagina es un desarrollo de sistema de control web"/>
+<meta name="keywords" content="Proyecto de ingenieria de Software"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static',filename='css/estilomenu.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/estilomenu.css')}}">
+<title>Menu</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{url_for('menu')}}">Sistema de control</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Sistema de usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('darDeAltaUsuario')}}">Dar de alta a usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('darDeHaltaVehi')}}">Dar de alta a vheiculos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sistema de vehiculos</a>
+            </li>
+            <li class="nav-item ml-auto">
+                <a class="nav-link" href="{{url_for('inicio')}}">Cerrar secion</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container p-4">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+    
+</body>
+
+</html>

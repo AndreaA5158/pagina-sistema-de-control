@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang= "es">
+<head>
+
+<meta charset="utf-8"/>
+<meta name="description" content="En esta pagina es un desarrollo de sistema de control web"/>
+<meta name="keywords" content="Proyecto de ingenieria de Software"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Login </title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/estiloLogin.css')}}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static',filename='js/Login.js') }}" ></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="backbox">
+      <div class="loginMsg">
+        <div class="textcontent">
+          <p class="title">¿No tienes una cuenta?</p>
+          <p>Regístrese para iniciar el sistema de control.</p>
+          <button id="switch1">Registrate</button>
+        </div>
+      </div>
+      <div class="signupMsg visibility">
+        <div class="textcontent">
+          <p class="title">¿Tienes una cuenta regisrada?</p>
+          <p>Inicia sesión para iniciar tu sistema de control.</p>
+          <button id="switch2">Iniciar secion</button>
+        </div>
+      </div>
+    </div>
+    <!-- backbox -->
+    
+    <div class="frontbox">
+      
+      <form action="/iniciar_menu" method="POST">
+      <div class="login">
+        <h2>INICIAR SESIÓN</h2>
+        <div class="inputbox">
+          <input type="text" name="USERNAME" placeholder="  USERNAME">
+          <input type="password" name="password" placeholder="  PASSWORD">
+        </div>
+        <p>¿Olvidaste tu contraseña?</p>
+        
+        <button>Entrar</button>
+      
+      </div>
+      </form>
+
+      <div class="signup hide">
+        <h2>Regístrate</h2>
+        <div class="inputbox">
+          <input type="text" name="USERNAME" placeholder="  USERNAME">
+          <input type="password" name="password" placeholder="  PASSWORD">
+          <input type="text" name="CODIGO" placeholder="  LICENSE KEY">
+        </div>
+        
+        <button>Registrarse</button>
+      
+      </div>
+
+    </div>
+    <!-- frontbox -->
+  </div>
+
+  
+</body>
+
+</html>

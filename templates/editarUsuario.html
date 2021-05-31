@@ -1,0 +1,14 @@
+
+   {% extends "base.html" %}
+
+   {% block content %}
+   <form action="/actus"  method="POST">
+    <input type="text" name="NumeroDeControl" placeholder="  ID" value="{{datos.0}}">
+    <input type="text" name="Nombre" placeholder="  Nombre" value="{{datos.1}}">
+    <input type="text" name="Apellido" placeholder="  Apellido" value="{{datos.2}}">
+    <input type="text" name="Turno" placeholder="  Turno" value="{{datos.3}}">
+    <input type="number" name="Celular" placeholder="  Celular"value="{{datos.4}}">
+    
+    <button >Actualizar</button>
+</form>
+{% endblock %}

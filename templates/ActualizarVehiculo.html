@@ -1,0 +1,13 @@
+
+   {% extends "base.html" %}
+
+   {% block content %}
+   <form action="/ActualizarVehiculo2" method="POST" >
+    <input type="text" name="Placas" placeholder="  Placas" value="{{datos.0}}">
+    <input type="text" name="Tipo de vehiculo" placeholder="  Tipo de vehiculo" value="{{datos.1}}">
+    <input type="text" name="Modulo" placeholder="  Modelo" value="{{datos.2}}">
+    <input type="text" name="Uso" placeholder="  Uso" value="{{datos.3}}">
+    
+    <button >Actualizar</button>
+</form>
+{% endblock %}

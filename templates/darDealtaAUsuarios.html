@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/AgregarUsuario" method="POST">
+<input type="text" name="NumeroDeControl" placeholder="  ID">
+<input type="text" name="Nombre" placeholder="  Nombre">
+<input type="text" name="Apellido" placeholder="  Apellido">
+<input type="text" name="Turno" placeholder="  Turno">
+<input type="number" name="Celular" placeholder="  Celular">
+
+<button class="btnguardausa">Guardar</button>
+</form>
+<div class="Tabla">
+
+<table class="table" id="tabl">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Turno</th>
+        <th scope="col">Celular</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in datos %}
+       
+      <tr>        
+        <td>{{i.0}}</td>
+        <td>{{i.1}}</td>
+        <td>{{i.2}}</td>
+        <td>{{i.3}}</td>
+        <td>
+        <a href="/eliminarUsuario/{{i.0}}" class="btn btn-danger">Eliminar</a>
+        <a href="/actualizarUsuarios/{{i.0}}" class="btn btn-secondary">Actualizar</a>
+        </td>
+      </tr>
+    {% endfor%}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
